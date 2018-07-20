@@ -1,5 +1,11 @@
 {
     "config": {
+
+        "network-interface": {
+            "help": "Options are ETHERNET, WIFI_ESP8266, WIFI_ODIN",
+            "value": "WIFI_ODIN"
+        },
+
         "app-label": {
             "help": "Sets a device friendly name displayed on the LCD",
             "value": "\"dragonfly\""
@@ -66,7 +72,7 @@
         },
         "wifi-password": {
             "help": "An optional password for wifi security authentication",
-            "value": "\"\""
+            "value": "\"mbeddemo\""
         },
         "wifi-rx": {
             "help": "RX pin for serial connection to external device",
@@ -78,7 +84,7 @@
         },
         "wifi-ssid": {
             "help": "The SSID to connect to if using a WiFi interface",
-            "value": "\"iotlab\""
+            "value": "\"mbeddemo\""
         },
         "wifi-tx": {
             "help": "TX pin for serial connection to external device",
@@ -101,6 +107,7 @@
         "*": {
             "lwip.ipv4-enabled": true,
             "lwip.ipv6-enabled": false,
+            "platform.stdio-convert-newlines": true,
             "mbed-client.event-loop-size": 1024,
             "mbed-client.sn-coap-max-blockwise-payload-size": 512,
             "mbed-trace.enable": null,
